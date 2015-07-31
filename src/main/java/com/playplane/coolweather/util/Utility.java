@@ -24,7 +24,7 @@ public class Utility {
     public static boolean handleProvincesResponse(CoolWeatherDB coolWeatherDB, String response) {
         if (!TextUtils.isEmpty(response)) {
             String[] allProvinces = response.split(",");
-            if (allProvinces != null && allProvinces.length > 0) {
+            if ( allProvinces.length > 0) {
                 for (String p : allProvinces) {
                     String[] array = p.split("\\|");
                     Province province = new Province();
@@ -61,7 +61,7 @@ public class Utility {
                                                  String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
             String[] allCounties = response.split(",");
-            if (allCounties != null && allCounties.length > 0) {
+            if ( allCounties.length > 0) {
                 for (String c : allCounties) {
                     String[] array = c.split("\\|");
                     County county = new County();
